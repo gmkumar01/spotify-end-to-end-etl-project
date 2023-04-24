@@ -5,7 +5,7 @@ In this project we are going to extract, transform and load spotify top global s
 ![this is a screenshot](etl_pipeline.jpg)
 
 ### Dataset/API
-Spotify API ![Spotify API](https://developer.spotify.com/documentation/) to retrieve data from spotify that contains information about album, artists and songs.
+[Spotify API](https://developer.spotify.com/documentation/web-api) to retrieve data from spotify that contains information about album, artists and songs.
 
 ### Services Used
 1. S3
