@@ -14,3 +14,12 @@ In this project we are going to extract, transform and load spotify top global s
 4. Glue Crawler
 5. Data Catalog
 6. Amazon Athena
+
+### Execution Steps
+1. Create a S3 Bucket.
+2. Create a AWSLambda Function to extract data using spotify api.
+3. Create a AWSLambda Function to transform extracted data.
+4. Add triggers to functions to extract data at desired rate and process the data once it is extracted.
+5. Create Crawler to automatically identify the data format or infer schema of the processed data to create a Data Catalog.
+6. Data Catalog is used to manage data that can be used by other services.
+7. Query data with Amazon Athena.
