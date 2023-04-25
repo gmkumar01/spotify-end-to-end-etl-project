@@ -2,12 +2,12 @@ import json
 import os
 import spotipy
 from spotipy.oauth2 import SpotifyClientCredentials
-import boto3  # used to programatically communicate with aws services
+import boto3                                      # Used to programatically communicate with AWS services
 from datetime import datetime
 
 def lambda_handler(event, context):
-  client_id=os.environ.get('client_id')
-  client_secret=os.environ.get('client_secret')
+  client_id=os.environ.get('client_id')           # Find client_id at spotify api website
+  client_secret=os.environ.get('client_secret')   # Find client_secret at spotify api website
 
   client_credentials_manager = SpotifyClientCredentials(client_id = client_id,client_secret=client_secret)
   sp = spotipy.Spotify(client_credentials_manager=client_credentials_manager)
@@ -19,5 +19,5 @@ def lambda_handler(event, context):
 
   filename = 'spotify_raw_' + str(datetime.now()) + '.json'
 
-  client = boto3.client('s3')   # Connecting to s3
+  client = boto3.client('s3')
   client.put_object(Bucket='spotify-etl-project-mani',Key='raw_data/to_processed/'+filename,Body=json.dumps(spotify_data))
