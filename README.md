@@ -4,8 +4,8 @@ In this project we are going to extract, transform and load spotify top global s
 
 ![this is a screenshot](etl_pipeline.jpg)
 
-### Dataset/API
-[Spotify API](https://developer.spotify.com/documentation/web-api) to retrieve data from spotify that contains information about album, artists and songs.
+### Understanding Dataset/API
+[Spotify API](https://developer.spotify.com/documentation/web-api) to retrieve spotify data. The data contains artists, songs and album names from top global songs spotify playlist. Using that data we can depict top 50 songs of the week, artist name for that song, name of the album that song belong to and how many songs that album has. We are going to transform the extracted data into readable format and load data into respective tables.
 
 ### Services Used
 1. S3
